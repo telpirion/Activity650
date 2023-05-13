@@ -64,3 +64,20 @@ func TestTwoDigitTeenInputs(t *testing.T) {
 		assert.Equal(t, tc.want, got)
 	}
 }
+
+func TestTwoDigitsGreaterThanNineteen(t *testing.T) {
+	testCases := []testCase{
+		{input: 21, want: "twenty-one"},
+		{input: 45, want: "forty-five"},
+		{input: 77, want: "seventy-seven"},
+		{input: 30, want: "thirty"},
+		{input: 80, want: "eighty"},
+	}
+	for _, tc := range testCases {
+		got, err := IntegerToWordedString(tc.input)
+		if err != nil {
+			t.Fatal(err)
+		}
+		assert.Equal(t, tc.want, got)
+	}
+}
