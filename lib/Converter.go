@@ -9,6 +9,10 @@
  */
 package lib
 
-func IntegerToWordedString(numberToConvert uint) (string, error) {
-	return "", nil
+func IntegerToWordedString(number uint) (string, error) {
+	intsToWords := map[uint]string{
+		1: "one",
+	}
+
+	return intsToWords[number], nil
 }
