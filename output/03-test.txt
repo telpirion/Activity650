@@ -1,0 +1,98 @@
+Running tool: /usr/local/go/bin/go test -timeout 30s -run ^TestTwoDigitTeenInputs$ activity650/lib
+
+=== RUN   TestTwoDigitTeenInputs
+    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:64:
+                Error Trace:    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:64
+                Error:          Not equal:
+                                expected: "ten"
+                                actual  : ""
+
+                                Diff:
+                                --- Expected
+                                +++ Actual
+                                @@ -1 +1 @@
+                                -ten
+                                +
+                Test:           TestTwoDigitTeenInputs
+    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:64:
+                Error Trace:    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:64
+                Error:          Not equal:
+                                expected: "eleven"
+                                actual  : ""
+
+                                Diff:
+                                --- Expected
+                                +++ Actual
+                                @@ -1 +1 @@
+                                -eleven
+                                +
+                Test:           TestTwoDigitTeenInputs
+    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:64:
+                Error Trace:    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:64
+                Error:          Not equal:
+                                expected: "thirteen"
+                                actual  : ""
+
+                                Diff:
+                                --- Expected
+                                +++ Actual
+                                @@ -1 +1 @@
+                                -thirteen
+                                +
+                Test:           TestTwoDigitTeenInputs
+    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:64:
+                Error Trace:    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:64
+                Error:          Not equal:
+                                expected: "seventeen"
+                                actual  : ""
+
+                                Diff:
+                                --- Expected
+                                +++ Actual
+                                @@ -1 +1 @@
+                                -seventeen
+                                +
+                Test:           TestTwoDigitTeenInputs
+    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:64:
+                Error Trace:    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:64
+                Error:          Not equal:
+                                expected: "nineteen"
+                                actual  : ""
+
+                                Diff:
+                                --- Expected
+                                +++ Actual
+                                @@ -1 +1 @@
+                                -nineteen
+                                +
+                Test:           TestTwoDigitTeenInputs
+--- FAIL: TestTwoDigitTeenInputs (0.00s)
+FAIL
+FAIL    activity650/lib 0.318s
+
+
+> Test run finished at 5/13/2023, 3:44:56 PM <
+
+Running tool: /usr/local/go/bin/go test -timeout 30s -run ^TestTwoDigitTeenInputs$ activity650/lib
+
+=== RUN   TestTwoDigitTeenInputs
+--- PASS: TestTwoDigitTeenInputs (0.00s)
+PASS
+ok      activity650/lib 0.307s
+
+
+> Test run finished at 5/13/2023, 3:46:27 PM <
+
+Running tool: /usr/local/go/bin/go test -timeout 30s -run ^(TestInputOne|TestOneDigitInputs|TestTwoDigitTeenInputs)$ activity650/lib
+
+=== RUN   TestInputOne
+--- PASS: TestInputOne (0.00s)
+=== RUN   TestOneDigitInputs
+--- PASS: TestOneDigitInputs (0.00s)
+=== RUN   TestTwoDigitTeenInputs
+--- PASS: TestTwoDigitTeenInputs (0.00s)
+PASS
+ok      activity650/lib 0.132s
+
+
+> Test run finished at 5/13/2023, 3:46:32 PM <
