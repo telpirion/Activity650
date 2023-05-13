@@ -16,6 +16,11 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
+type testCase struct {
+	input uint
+	want  string
+}
+
 func TestInputOne(t *testing.T) {
 	input := 1
 	want := "one"
@@ -28,15 +33,29 @@ func TestInputOne(t *testing.T) {
 }
 
 func TestOneDigitInputs(t *testing.T) {
-	testCases := []struct {
-		input uint
-		want  string
-	}{
+	testCases := []testCase{
 		{input: 2, want: "two"},
 		{input: 7, want: "seven"},
 		{input: 9, want: "nine"},
 	}
 
+	for _, tc := range testCases {
+		got, err := IntegerToWordedString(tc.input)
+		if err != nil {
+			t.Fatal(err)
+		}
+		assert.Equal(t, tc.want, got)
+	}
+}
+
+func TestTwoDigitTeenInputs(t *testing.T) {
+	testCases := []testCase{
+		{input: 10, want: "ten"},
+		{input: 11, want: "eleven"},
+		{input: 13, want: "thirteen"},
+		{input: 17, want: "seventeen"},
+		{input: 19, want: "nineteen"},
+	}
 	for _, tc := range testCases {
 		got, err := IntegerToWordedString(tc.input)
 		if err != nil {
