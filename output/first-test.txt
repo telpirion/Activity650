@@ -1,0 +1,29 @@
+Running tool: /usr/local/go/bin/go test -timeout 30s -run ^TestInputOne$ activity650/lib
+
+=== RUN   TestInputOne
+    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:27:
+                Error Trace:    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:27
+                Error:          Not equal:
+                                expected: "one"
+                                actual  : ""
+
+                                Diff:
+                                --- Expected
+                                +++ Actual
+                                @@ -1 +1 @@
+                                -one
+                                +
+                Test:           TestInputOne
+--- FAIL: TestInputOne (0.00s)
+FAIL
+FAIL    activity650/lib 0.146s
+
+Running tool: /usr/local/go/bin/go test -timeout 30s -run ^TestInputOne$ activity650/lib
+
+=== RUN   TestInputOne
+--- PASS: TestInputOne (0.00s)
+PASS
+ok      activity650/lib 0.322s
+
+
+> Test run finished at 5/13/2023, 3:25:01 PM <
