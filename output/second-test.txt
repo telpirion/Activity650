@@ -1,0 +1,58 @@
+Running tool: /usr/local/go/bin/go test -timeout 30s -run ^TestOneDigitInputs$ activity650/lib
+
+=== RUN   TestOneDigitInputs
+    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:45:
+                Error Trace:    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:45
+                Error:          Not equal:
+                                expected: "two"
+                                actual  : ""
+
+                                Diff:
+                                --- Expected
+                                +++ Actual
+                                @@ -1 +1 @@
+                                -two
+                                +
+                Test:           TestOneDigitInputs
+    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:45:
+                Error Trace:    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:45
+                Error:          Not equal:
+                                expected: "seven"
+                                actual  : ""
+
+                                Diff:
+                                --- Expected
+                                +++ Actual
+                                @@ -1 +1 @@
+                                -seven
+                                +
+                Test:           TestOneDigitInputs
+    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:45:
+                Error Trace:    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:45
+                Error:          Not equal:
+                                expected: "nine"
+                                actual  : ""
+
+                                Diff:
+                                --- Expected
+                                +++ Actual
+                                @@ -1 +1 @@
+                                -nine
+                                +
+                Test:           TestOneDigitInputs
+--- FAIL: TestOneDigitInputs (0.00s)
+FAIL
+FAIL    activity650/lib 0.294s
+
+
+> Test run finished at 5/13/2023, 3:35:34 PM <
+
+Running tool: /usr/local/go/bin/go test -timeout 30s -run ^TestOneDigitInputs$ activity650/lib
+
+=== RUN   TestOneDigitInputs
+--- PASS: TestOneDigitInputs (0.00s)
+PASS
+ok      activity650/lib 0.303s
+
+
+> Test run finished at 5/13/2023, 3:37:29 PM <
