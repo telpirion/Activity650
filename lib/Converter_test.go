@@ -26,3 +26,22 @@ func TestInputOne(t *testing.T) {
 
 	assert.Equal(t, want, got)
 }
+
+func TestOneDigitInputs(t *testing.T) {
+	testCases := []struct {
+		input uint
+		want  string
+	}{
+		{input: 2, want: "two"},
+		{input: 7, want: "seven"},
+		{input: 9, want: "nine"},
+	}
+
+	for _, tc := range testCases {
+		got, err := IntegerToWordedString(tc.input)
+		if err != nil {
+			t.Fatal(err)
+		}
+		assert.Equal(t, tc.want, got)
+	}
+}
