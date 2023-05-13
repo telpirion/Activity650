@@ -1,0 +1,4 @@
+ericmschmidt@Erics-MacBook-Pro-2 Activity650 % go run . -n=5
+Convert the integer 5 to English:
+English output for integer is: 
+ericmschmidt@Erics-MacBook-Pro-2 Activity650 % 
