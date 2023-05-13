@@ -17,8 +17,10 @@ import (
 func IntegerToWordedString(number uint) (string, error) {
 
 	// Get the tens digit out
-	tensDigit := number / 10
-	onesDigit := number % 10
+	hundredsDigit := number / 100
+	tmpNumber := number - (hundredsDigit * 100)
+	tensDigit := tmpNumber / 10
+	onesDigit := tmpNumber % 10
 	tensWord := ""
 	onesWord := ""
 
@@ -58,17 +60,18 @@ func IntegerToWordedString(number uint) (string, error) {
 		return teens[number], nil
 	}
 
+	tensMap := map[uint]string{
+		2: "twenty-",
+		3: "thirty-",
+		4: "forty-",
+		5: "fifty-",
+		6: "sixty-",
+		7: "seventy-",
+		8: "eighty-",
+		9: "ninety-",
+	}
+
 	if tensDigit >= 2 {
-		tensMap := map[uint]string{
-			2: "twenty-",
-			3: "thirty-",
-			4: "forty-",
-			5: "fifty-",
-			6: "sixty-",
-			7: "seventy-",
-			8: "eighty-",
-			9: "ninety-",
-		}
 		tensWord = tensMap[tensDigit]
 	}
 
@@ -77,7 +80,25 @@ func IntegerToWordedString(number uint) (string, error) {
 		tensWord = strings.Replace(tensWord, "-", "", 1)
 	}
 
-	fullWord := fmt.Sprintf("%s%s", tensWord, onesWord)
+	if number < 100 {
+		fullWord := fmt.Sprintf("%s%s", tensWord, onesWord)
+		return fullWord, nil
+	}
 
+	hundredsMap := map[uint]string{
+		1: "one-hundred",
+		2: "two-hundred",
+		3: "three-hundred",
+		4: "four-hundred",
+		5: "five-hundred",
+		6: "six-hundred",
+		7: "seven-hundred",
+		8: "eight-hundred",
+		9: "nine-hundred",
+	}
+
+	hundredsWord := hundredsMap[hundredsDigit]
+	fullWord := fmt.Sprintf("%s %s%s", hundredsWord, tensWord, onesWord)
+	fullWord = strings.TrimRight(fullWord, " ")
 	return fullWord, nil
 }

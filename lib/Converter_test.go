@@ -81,3 +81,20 @@ func TestTwoDigitsGreaterThanNineteen(t *testing.T) {
 		assert.Equal(t, tc.want, got)
 	}
 }
+
+func TestThreeDigitNumbers(t *testing.T) {
+	testCases := []testCase{
+		{input: 100, want: "one-hundred"},
+		{input: 300, want: "three-hundred"},
+		{input: 402, want: "four-hundred two"},
+		{input: 560, want: "five-hundred sixty"},
+		{input: 756, want: "seven-hundred fifty-six"},
+	}
+	for _, tc := range testCases {
+		got, err := IntegerToWordedString(tc.input)
+		if err != nil {
+			t.Fatal(err)
+		}
+		assert.Equal(t, tc.want, got)
+	}
+}

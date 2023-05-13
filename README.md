@@ -1,16 +1,15 @@
-<div style="background-color: blue">
-<h1>Remarks</h1>
+
+# Remarks
 
 I've chosen to complete this assignment using Golang. Golang doesn't have a
 maintained xUnit testing framework listed
-<a ref="https://en.wikipedia.org/wiki/List_of_unit_testing_frameworks">here</a>.
+[here](https://en.wikipedia.org/wiki/List_of_unit_testing_frameworks).
 However, the
-<a ref="https://github.com/stretchr/testify">stretchr/Testify</a> library
+[stretchr/Testify](https://github.com/stretchr/testify) library
 meets most requirements for an xUnit framework.
 
 --Eric
 
-</div>
 # Introduction 
 The simple project designed to let you practice using TDD (Test Driven Development).
 
