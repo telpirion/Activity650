@@ -16,9 +16,12 @@ import (
 
 func IntegerToWordedString(number uint) (string, error) {
 
-	// Get the tens digit out
-	hundredsDigit := number / 100
-	tmpNumber := number - (hundredsDigit * 100)
+	// Get the digits out
+	// TODO: Break this out into a new function
+	thousandsDigit := number / 1000
+	tmpNumber := number - (thousandsDigit * 1000)
+	hundredsDigit := tmpNumber / 100
+	tmpNumber = tmpNumber - (hundredsDigit * 100)
 	tensDigit := tmpNumber / 10
 	onesDigit := tmpNumber % 10
 	tensWord := ""
@@ -43,23 +46,7 @@ func IntegerToWordedString(number uint) (string, error) {
 		return onesWord, nil
 	}
 
-	// Handle teens
-	if number < 20 {
-		teens := map[uint]string{
-			10: "ten",
-			11: "eleven",
-			12: "twelve",
-			13: "thirteen",
-			14: "fourteen",
-			15: "fifteen",
-			16: "sixteen",
-			17: "seventeen",
-			18: "eighteen",
-			19: "nineteen",
-		}
-		return teens[number], nil
-	}
-
+	// Handle numbers 20-99
 	tensMap := map[uint]string{
 		2: "twenty-",
 		3: "thirty-",
@@ -73,6 +60,25 @@ func IntegerToWordedString(number uint) (string, error) {
 
 	if tensDigit >= 2 {
 		tensWord = tensMap[tensDigit]
+	}
+
+	// Handle teens
+	if tensDigit == 1 {
+		onesWord = ""
+		tensDigit = 10 + onesDigit
+		teens := map[uint]string{
+			10: "ten",
+			11: "eleven",
+			12: "twelve",
+			13: "thirteen",
+			14: "fourteen",
+			15: "fifteen",
+			16: "sixteen",
+			17: "seventeen",
+			18: "eighteen",
+			19: "nineteen",
+		}
+		tensWord = teens[tensDigit]
 	}
 
 	if onesWord == "zero" {
@@ -98,7 +104,29 @@ func IntegerToWordedString(number uint) (string, error) {
 	}
 
 	hundredsWord := hundredsMap[hundredsDigit]
-	fullWord := fmt.Sprintf("%s %s%s", hundredsWord, tensWord, onesWord)
+
+	if number < 1000 {
+		fullWord := fmt.Sprintf("%s %s%s", hundredsWord, tensWord, onesWord)
+		fullWord = strings.TrimRight(fullWord, " ")
+		return fullWord, nil
+	}
+
+	thousandsMap := map[uint]string{
+		1: "one-thousand",
+		2: "two-thousand",
+		3: "three-thousand",
+		4: "four-thousand",
+		5: "five-thousand",
+		6: "six-thousand",
+		7: "seven-thousand",
+		8: "eight-thousand",
+		9: "nine-thousand",
+	}
+	thousandsWord := thousandsMap[thousandsDigit]
+
+	fullWord := fmt.Sprintf("%s, %s %s%s", thousandsWord,
+		hundredsWord, tensWord, onesWord)
 	fullWord = strings.TrimRight(fullWord, " ")
+	fullWord = strings.Replace(fullWord, "  ", " ", -1)
 	return fullWord, nil
 }

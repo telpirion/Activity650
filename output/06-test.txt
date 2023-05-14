@@ -1,0 +1,332 @@
+Running tool: /usr/local/go/bin/go test -timeout 30s -run ^(TestInputOne|TestOneDigitInputs|TestTwoDigitTeenInputs|TestTwoDigitsGreaterThanNineteen|TestThreeDigitNumbers|TestFourDigitNumbers)$ activity650/lib
+
+=== RUN   TestInputOne
+--- PASS: TestInputOne (0.00s)
+=== RUN   TestOneDigitInputs
+--- PASS: TestOneDigitInputs (0.00s)
+=== RUN   TestTwoDigitTeenInputs
+    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:64:
+                Error Trace:    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:64
+                Error:          Not equal:
+                                expected: "ten"
+                                actual  : ""
+
+                                Diff:
+                                --- Expected
+                                +++ Actual
+                                @@ -1 +1 @@
+                                -ten
+                                +
+                Test:           TestTwoDigitTeenInputs
+    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:64:
+                Error Trace:    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:64
+                Error:          Not equal:
+                                expected: "eleven"
+                                actual  : "one"
+
+                                Diff:
+                                --- Expected
+                                +++ Actual
+                                @@ -1 +1 @@
+                                -eleven
+                                +one
+                Test:           TestTwoDigitTeenInputs
+    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:64:
+                Error Trace:    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:64
+                Error:          Not equal:
+                                expected: "thirteen"
+                                actual  : "three"
+
+                                Diff:
+                                --- Expected
+                                +++ Actual
+                                @@ -1 +1 @@
+                                -thirteen
+                                +three
+                Test:           TestTwoDigitTeenInputs
+    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:64:
+                Error Trace:    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:64
+                Error:          Not equal:
+                                expected: "seventeen"
+                                actual  : "seven"
+
+                                Diff:
+                                --- Expected
+                                +++ Actual
+                                @@ -1 +1 @@
+                                -seventeen
+                                +seven
+                Test:           TestTwoDigitTeenInputs
+    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:64:
+                Error Trace:    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:64
+                Error:          Not equal:
+                                expected: "nineteen"
+                                actual  : "nine"
+
+                                Diff:
+                                --- Expected
+                                +++ Actual
+                                @@ -1 +1 @@
+                                -nineteen
+                                +nine
+                Test:           TestTwoDigitTeenInputs
+--- FAIL: TestTwoDigitTeenInputs (0.00s)
+=== RUN   TestTwoDigitsGreaterThanNineteen
+--- PASS: TestTwoDigitsGreaterThanNineteen (0.00s)
+=== RUN   TestThreeDigitNumbers
+--- PASS: TestThreeDigitNumbers (0.00s)
+=== RUN   TestFourDigitNumbers
+    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:115:
+                Error Trace:    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:115
+                Error:          Not equal:
+                                expected: "one-thousand, one"
+                                actual  : "one-thousand,  one"
+
+                                Diff:
+                                --- Expected
+                                +++ Actual
+                                @@ -1 +1 @@
+                                -one-thousand, one
+                                +one-thousand,  one
+                Test:           TestFourDigitNumbers
+    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:115:
+                Error Trace:    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:115
+                Error:          Not equal:
+                                expected: "three-thousand, thirteen"
+                                actual  : "three-thousand,  three"
+
+                                Diff:
+                                --- Expected
+                                +++ Actual
+                                @@ -1 +1 @@
+                                -three-thousand, thirteen
+                                +three-thousand,  three
+                Test:           TestFourDigitNumbers
+    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:115:
+                Error Trace:    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:115
+                Error:          Not equal:
+                                expected: "four-thousand, one hundred"
+                                actual  : "four-thousand, one-hundred "
+
+                                Diff:
+                                --- Expected
+                                +++ Actual
+                                @@ -1 +1 @@
+                                -four-thousand, one hundred
+                                +four-thousand, one-hundred
+                Test:           TestFourDigitNumbers
+    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:115:
+                Error Trace:    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:115
+                Error:          Not equal:
+                                expected: "seven-thousand, sixty-eight"
+                                actual  : "seven-thousand,  sixty-eight"
+
+                                Diff:
+                                --- Expected
+                                +++ Actual
+                                @@ -1 +1 @@
+                                -seven-thousand, sixty-eight
+                                +seven-thousand,  sixty-eight
+                Test:           TestFourDigitNumbers
+--- FAIL: TestFourDigitNumbers (0.00s)
+FAIL
+FAIL    activity650/lib 0.147s
+
+
+> Test run finished at 5/13/2023, 4:51:09 PM <
+
+Running tool: /usr/local/go/bin/go test -timeout 30s -run ^TestFourDigitNumbers$ activity650/lib
+
+=== RUN   TestFourDigitNumbers
+    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:115:
+                Error Trace:    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:115
+                Error:          Not equal:
+                                expected: "one-thousand, one"
+                                actual  : "one-thousand,  one"
+
+                                Diff:
+                                --- Expected
+                                +++ Actual
+                                @@ -1 +1 @@
+                                -one-thousand, one
+                                +one-thousand,  one
+                Test:           TestFourDigitNumbers
+    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:115:
+                Error Trace:    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:115
+                Error:          Not equal:
+                                expected: "three-thousand, thirteen"
+                                actual  : "three-thousand,  three"
+
+                                Diff:
+                                --- Expected
+                                +++ Actual
+                                @@ -1 +1 @@
+                                -three-thousand, thirteen
+                                +three-thousand,  three
+                Test:           TestFourDigitNumbers
+    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:115:
+                Error Trace:    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:115
+                Error:          Not equal:
+                                expected: "four-thousand, one hundred"
+                                actual  : "four-thousand, one-hundred"
+
+                                Diff:
+                                --- Expected
+                                +++ Actual
+                                @@ -1 +1 @@
+                                -four-thousand, one hundred
+                                +four-thousand, one-hundred
+                Test:           TestFourDigitNumbers
+    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:115:
+                Error Trace:    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:115
+                Error:          Not equal:
+                                expected: "seven-thousand, sixty-eight"
+                                actual  : "seven-thousand,  sixty-eight"
+
+                                Diff:
+                                --- Expected
+                                +++ Actual
+                                @@ -1 +1 @@
+                                -seven-thousand, sixty-eight
+                                +seven-thousand,  sixty-eight
+                Test:           TestFourDigitNumbers
+--- FAIL: TestFourDigitNumbers (0.00s)
+FAIL
+FAIL    activity650/lib 0.151s
+
+
+> Test run finished at 5/13/2023, 4:51:47 PM <
+
+Running tool: /usr/local/go/bin/go test -timeout 30s -run ^TestFourDigitNumbers$ activity650/lib
+
+=== RUN   TestFourDigitNumbers
+    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:115:
+                Error Trace:    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:115
+                Error:          Not equal:
+                                expected: "one-thousand, one"
+                                actual  : "one-thousand,  one"
+
+                                Diff:
+                                --- Expected
+                                +++ Actual
+                                @@ -1 +1 @@
+                                -one-thousand, one
+                                +one-thousand,  one
+                Test:           TestFourDigitNumbers
+    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:115:
+                Error Trace:    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:115
+                Error:          Not equal:
+                                expected: "three-thousand, thirteen"
+                                actual  : "three-thousand,  three"
+
+                                Diff:
+                                --- Expected
+                                +++ Actual
+                                @@ -1 +1 @@
+                                -three-thousand, thirteen
+                                +three-thousand,  three
+                Test:           TestFourDigitNumbers
+    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:115:
+                Error Trace:    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:115
+                Error:          Not equal:
+                                expected: "seven-thousand, sixty-eight"
+                                actual  : "seven-thousand,  sixty-eight"
+
+                                Diff:
+                                --- Expected
+                                +++ Actual
+                                @@ -1 +1 @@
+                                -seven-thousand, sixty-eight
+                                +seven-thousand,  sixty-eight
+                Test:           TestFourDigitNumbers
+--- FAIL: TestFourDigitNumbers (0.00s)
+FAIL
+FAIL    activity650/lib 0.145s
+
+
+> Test run finished at 5/13/2023, 4:52:08 PM <
+
+Running tool: /usr/local/go/bin/go test -timeout 30s -run ^TestFourDigitNumbers$ activity650/lib
+
+=== RUN   TestFourDigitNumbers
+    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:115:
+                Error Trace:    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:115
+                Error:          Not equal:
+                                expected: "three-thousand, thirteen"
+                                actual  : "three-thousand, three"
+
+                                Diff:
+                                --- Expected
+                                +++ Actual
+                                @@ -1 +1 @@
+                                -three-thousand, thirteen
+                                +three-thousand, three
+                Test:           TestFourDigitNumbers
+--- FAIL: TestFourDigitNumbers (0.00s)
+FAIL
+FAIL    activity650/lib 0.289s
+
+
+> Test run finished at 5/13/2023, 4:53:43 PM <
+
+The test run did not record any output.
+
+> Test run finished at 5/13/2023, 4:55:31 PM <
+
+Running tool: /usr/local/go/bin/go test -timeout 30s -run ^TestFourDigitNumbers$ activity650/lib
+
+=== RUN   TestFourDigitNumbers
+    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:115:
+                Error Trace:    /Users/ericmschmidt/GitHub/telpirion/Activity650/lib/Converter_test.go:115
+                Error:          Not equal:
+                                expected: "three-thousand, thirteen"
+                                actual  : "three-thousand,"
+
+                                Diff:
+                                --- Expected
+                                +++ Actual
+                                @@ -1 +1 @@
+                                -three-thousand, thirteen
+                                +three-thousand,
+                Test:           TestFourDigitNumbers
+--- FAIL: TestFourDigitNumbers (0.00s)
+FAIL
+FAIL    activity650/lib 0.298s
+
+
+> Test run finished at 5/13/2023, 4:56:29 PM <
+
+The test run did not record any output.
+
+> Test run finished at 5/13/2023, 4:57:20 PM <
+
+Running tool: /usr/local/go/bin/go test -timeout 30s -run ^TestFourDigitNumbers$ activity650/lib
+
+=== RUN   TestFourDigitNumbers
+--- PASS: TestFourDigitNumbers (0.00s)
+PASS
+ok      activity650/lib 0.233s
+
+
+> Test run finished at 5/13/2023, 4:57:56 PM <
+
+Running tool: /usr/local/go/bin/go test -timeout 30s -run ^(TestInputOne|TestOneDigitInputs|TestTwoDigitTeenInputs|TestTwoDigitsGreaterThanNineteen|TestThreeDigitNumbers|TestFourDigitNumbers)$ activity650/lib
+
+=== RUN   TestInputOne
+--- PASS: TestInputOne (0.00s)
+=== RUN   TestOneDigitInputs
+--- PASS: TestOneDigitInputs (0.00s)
+=== RUN   TestTwoDigitTeenInputs
+--- PASS: TestTwoDigitTeenInputs (0.00s)
+=== RUN   TestTwoDigitsGreaterThanNineteen
+--- PASS: TestTwoDigitsGreaterThanNineteen (0.00s)
+=== RUN   TestThreeDigitNumbers
+--- PASS: TestThreeDigitNumbers (0.00s)
+=== RUN   TestFourDigitNumbers
+--- PASS: TestFourDigitNumbers (0.00s)
+PASS
+ok      activity650/lib 0.128s
+
+
+> Test run finished at 5/13/2023, 4:57:59 PM <
+

@@ -98,3 +98,20 @@ func TestThreeDigitNumbers(t *testing.T) {
 		assert.Equal(t, tc.want, got)
 	}
 }
+
+func TestFourDigitNumbers(t *testing.T) {
+	testCases := []testCase{
+		{input: 1001, want: "one-thousand, one"},
+		{input: 3013, want: "three-thousand, thirteen"},
+		{input: 4100, want: "four-thousand, one-hundred"},
+		{input: 7068, want: "seven-thousand, sixty-eight"},
+		{input: 9999, want: "nine-thousand, nine-hundred ninety-nine"},
+	}
+	for _, tc := range testCases {
+		got, err := IntegerToWordedString(tc.input)
+		if err != nil {
+			t.Fatal(err)
+		}
+		assert.Equal(t, tc.want, got)
+	}
+}
